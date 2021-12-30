@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fd6-WB-jrC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fJ0-6t-oJn">
+            <objects>
+                <navigationController id="S52-q0-sc6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EAO-Mg-6AE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Fd6-WB-jrC" kind="relationship" relationship="rootViewController" id="ckm-ec-px6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUU-of-WJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-745" y="98"/>
+        </scene>
+        <!--Main Menu Controller-->
+        <scene sceneID="L63-ge-JaD">
+            <objects>
+                <viewController id="Fd6-WB-jrC" customClass="MainMenuController" customModule="Millionare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K3k-Go-xhz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dj-qJ-qMl">
+                                <rect key="frame" x="62" y="577" width="290" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ИГРАТЬ">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startGameButton:" destination="Fd6-WB-jrC" eventType="touchUpInside" id="S26-DA-6Cb"/>
+                                    <segue destination="zYV-Jp-cz2" kind="show" id="iLi-lM-qR9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujw-F0-tPI">
+                                <rect key="frame" x="62" y="616" width="290" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="РЕЗУЛЬТАТЫ">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resultsGameButton:" destination="Fd6-WB-jrC" eventType="touchUpInside" id="abN-RH-Dyq"/>
+                                    <segue destination="4df-W3-SzK" kind="show" id="2pY-tB-onG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jeo-ji-Fy0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jeo-ji-Fy0" firstAttribute="trailing" secondItem="3dj-qJ-qMl" secondAttribute="trailing" constant="62" id="2hE-2f-kuj"/>
+                            <constraint firstItem="3dj-qJ-qMl" firstAttribute="top" secondItem="Jeo-ji-Fy0" secondAttribute="top" constant="489" id="JWS-GV-Ivf"/>
+                            <constraint firstItem="3dj-qJ-qMl" firstAttribute="leading" secondItem="Jeo-ji-Fy0" secondAttribute="leading" constant="62" id="XRz-am-MJu"/>
+                            <constraint firstItem="3dj-qJ-qMl" firstAttribute="leading" secondItem="Jeo-ji-Fy0" secondAttribute="leading" constant="62" id="XX0-1T-KQO"/>
+                            <constraint firstItem="ujw-F0-tPI" firstAttribute="leading" secondItem="Jeo-ji-Fy0" secondAttribute="leading" constant="62" id="o09-qR-a1r"/>
+                            <constraint firstItem="ujw-F0-tPI" firstAttribute="top" secondItem="3dj-qJ-qMl" secondAttribute="bottom" constant="8" symbolic="YES" id="pHL-8C-r4T"/>
+                            <constraint firstItem="Jeo-ji-Fy0" firstAttribute="trailing" secondItem="3dj-qJ-qMl" secondAttribute="trailing" constant="62" id="rs5-1t-oqi"/>
+                            <constraint firstItem="Jeo-ji-Fy0" firstAttribute="trailing" secondItem="ujw-F0-tPI" secondAttribute="trailing" constant="62" id="w58-jK-DSo"/>
+                            <constraint firstItem="Jeo-ji-Fy0" firstAttribute="bottom" secondItem="ujw-F0-tPI" secondAttribute="bottom" constant="215" id="wza-gC-riQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="njK-LX-Mto"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6aj-eq-si4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="Qkj-Ty-jrm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="zYV-Jp-cz2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hbe-J8-x1B"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0py-6h-sjA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221" y="487"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="zY0-bF-6fG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Results" id="4df-W3-SzK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="of0-Mu-CJr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kK0-Sm-ZSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="487"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
